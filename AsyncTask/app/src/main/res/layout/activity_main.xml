@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".MainActivity"
+    android:focusableInTouchMode="true"
+    android:clickable="true"
+    android:focusable="true" >
+
+
+    <TextView
+        android:id="@+id/temp_text"
+        android:layout_width="358dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Temperature:"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txt_temp_val"
+        android:layout_width="123dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-180dp"
+        android:layout_marginTop="35dp"
+        android:layout_toRightOf="@+id/temp_text"
+        android:text=" "
+        android:textColor="#ffffff" />
+
+
+    <TextView
+        android:id="@+id/humidity_text"
+        android:layout_width="358dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/temp_text"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Humidity:"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txt_humid_val"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-180dp"
+        android:layout_marginTop="79dp"
+        android:layout_toRightOf="@+id/humidity_text"
+        android:text=" "
+        android:textColor="#ffffff" />
+
+
+    <TextView
+        android:id="@+id/activity_text"
+        android:layout_width="358dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/humidity_text"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Activity:"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txt_activity_val"
+        android:layout_width="154dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-180dp"
+        android:layout_marginTop="120dp"
+        android:layout_toRightOf="@+id/activity_text"
+        android:text=" "
+        android:textColor="#ffffff" />
+
+
+    <TextView
+        android:id="@+id/reading_text"
+        android:layout_width="101dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_text"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:autoText="false"
+        android:fontFamily="sans-serif-black"
+        android:inputType="textMultiLine"
+        android:text="No of senor readings:"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/input_reading"
+        android:layout_width="135dp"
+        android:layout_height="46dp"
+        android:layout_below="@+id/activity_text"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="21dp"
+        android:layout_toRightOf="@+id/reading_text"
+        android:background="#CCCCCC"
+        android:ems="10"
+        android:inputType="number"></EditText>
+
+    <Button
+        android:id="@+id/generate"
+        android:layout_width="124dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/input_reading"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorAccent"
+        android:textColor="#ffffff"
+        android:text="Generate" />
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/input_reading"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/generate"
+        android:background="#ff0006"
+        android:textColor="#ffffff"
+        android:onClick="finishActivity"
+        android:text="Cancel" />
+
+    <TextView
+        android:id="@+id/output_title"
+        android:layout_width="381dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/generate"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Output:"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txt_output"
+        android:layout_width="wrap_content"
+        android:layout_height="418dp"
+        android:layout_below="@+id/generate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="false"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginRight="46dp"
+        android:layout_marginBottom="26dp"
+        android:background="#808080"
+        android:scrollbars="vertical"
+        android:textColor="#ffffff"
+
+        />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="218dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cancel"
+        android:layout_marginLeft="-37dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/generate" />
+
+
+</RelativeLayout>
